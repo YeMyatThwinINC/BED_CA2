@@ -49,7 +49,7 @@ module.exports.deleteById = (data, callback) =>
     DELETE FROM Task 
     WHERE task_id = ?;
 
-    ALTER TABLE user AUTO_INCREMENT = 1;
+    ALTER TABLE User AUTO_INCREMENT = 1;
     `;
 const VALUES = [data.task_id];
 

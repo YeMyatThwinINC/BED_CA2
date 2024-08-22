@@ -165,10 +165,10 @@ module.exports.deleteById = (data, callback) =>
 
     ALTER TABLE User AUTO_INCREMENT = 1;
 
-    DELETE FROM elemental 
+    DELETE FROM Elemental 
     WHERE owner_id = ?;
 
-    DELETE FROM messages 
+    DELETE FROM Messages 
     WHERE user_id = ?;
 
     DELETE FROM TaskProgress 

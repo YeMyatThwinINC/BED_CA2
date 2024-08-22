@@ -16,10 +16,10 @@ module.exports.insertSingle = (data, callback) =>
     VALUES (?, ?, ?, ?);
 
     SELECT points INTO @task_reward
-    FROM task
+    FROM Task
     WHERE task_id = ?;
 
-    UPDATE user
+    UPDATE User
     SET elemunchies = elemunchies + @task_reward
     WHERE id = ?;
 
