@@ -1,0 +1,77 @@
+:root
+{
+    --custom-color: #8062D6;
+    --custom-color-darker: #322653;
+    --custom-color-light: #9288F8;
+    --custom-color-rgb: 128, 98, 214;
+    --custom-color-light-rgb: 255, 210, 215;
+    --custom-text-color: #ffffff;
+}
+
+.accordion
+{
+    --bs-accordion-btn-focus-border-color: var(--custom-color-light);
+    --bs-accordion-btn-focus-box-shadow: 0 0 0 0.25rem var(--custom-color-light);
+    --bs-accordion-active-bg: var(--custom-color-light);
+    --bs-accordion-active-color: var(--custom-color-darker);
+}
+
+.btn-primary {
+    --bs-btn-bg: var(--custom-color);
+    --bs-btn-border-color: var(--custom-color);
+    --bs-btn-hover-bg: var(--custom-color-darker);
+    --bs-btn-hover-border-color: var(--custom-color-darker);
+    --bs-btn-active-bg: var(--custom-color-light);
+    --bs-btn-active-border-color: var(--custom-color-light);
+    --bs-btn-disabled-bg: var(--bs-success-rgb);
+    --bs-btn-disabled-border-color: var(--bs-success-rgb);
+}
+
+body {
+    background-color: #f3f2ff;
+}
+.bg-primary {
+    --bs-bg-opacity: 1;
+    background-color: rgba(var(--custom-color-rgb),var(--bs-bg-opacity))!important;
+}
+
+.form-check-input:checked {
+    background-color: var(--custom-color);
+    border-color: var(--custom-color);
+}
+
+.form-control:focus, 
+.form-check-input:focus {
+    border-color: rgba(var(--custom-color-light-rgb), 0.8);
+    box-shadow: 0 0 0 4px rgba(var(--custom-color-light-rgb), 0.6);
+}
+
+footer {
+    color: var(--custom-text-color);
+}
+
+
+.update, .delete{
+    background-color: white;
+}
+
+.element-Fire{
+    background-color: rgba(255, 0, 0, 0.2);
+}
+
+.element-Wind{
+    background-color: rgba(42, 165, 95, 0.2);
+}
+
+.element-Water{
+    background-color: rgb(0, 183, 255, 0.2);
+}
+
+.element-Earth{
+    background-color: rgb(165, 93, 42, 0.2);
+}
+
+.spotLight {
+    background-color: gold;
+    backdrop-filter: blur(10px); 
+  }

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- the last link is for the icon in the footer --> 
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/color.css" rel="stylesheet" />
+
+    <title>Profile</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/icon_cookie.png"> <!-- the web icon -->
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <div class="container">
+        <a class="navbar-brand" href="index.html"
+          ><img src="./img/icon_cookie.png"
+            class="logo img-fluid"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <!-- me-auto: margin-right: auto -->
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Tasks</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="elementals.html">Elementals</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="elementalDex.html">ElementalDex</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="users.html">Users</a>
+            </li>
+          </ul>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <!-- ms-auto: margin-left: auto -->
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a id="profileButton" href="/profile.html" class="nav-link">Profile</a>
+            </li>
+            <li class="nav-item">
+              <a id="logoutButton" href="#" class="nav-link">Logout</a>
+            </li>
+            <li class="nav-item">
+              <a id="loginButton" href="/login.html" class="nav-link">Login</a>
+            </li>
+            <li>
+              <div class="btn-nav">
+                <a id="registerButton" class="btn text-bg-dark btn-small navbar-btn" href="/register.html"
+                  >Register!</a
+                >
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div id="loginOnlyDiv"></div>
+    </nav>
+
+    <main class="py-4">
+      <div class="container mb-4">
+          <div class="row">
+              <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 p-5">
+                <h1 class="text-center">User Details</h1>
+                  <div id="userInfo" class="row"></div>
+              </div>
+              <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 p-1">
+                  <h1 class="text-center">Summoned Elemental</h1>
+                  <div id="activeElemental" class="row"></div>
+              </div>
+              <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 p-5">
+                <h1 class="text-center">Inventory</h1>
+                  <div id="pointInfo" class="row"></div>
+              </div>
+          </div>
+          <hr>
+          <div class="row p-3">
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                <h1 class="text-center">User's Elementals</h1>
+                <div id="elementalList" class="row"></div>
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+              <h1 class="text-center">User's Task Progress</h1>
+              <table class="table table-hover border text-center">
+                <thead>
+                  <tr>
+                    <th scope="col">Progress ID</th>
+                    <th scope="col">Task ID</th>
+                    <th scope="col">Title</th>
+                    <th scope="col">Points</th>
+                    <th scope="col">Completion Date</th>
+                  </tr>
+                </thead>
+                <tbody id="progressList">
+                </tbody>
+              </table>
+            </div>
+          </div>
+      </div>
+  </main>
+
+    <footer class="text-center text-white" style="background-color: #f2d0ff;">
+      <div class="container pt-4"> 
+        <section class="mb-4">
+          <!-- Facebook --> 
+          <a
+            class="btn btn-link btn-floating btn-lg text-dark m-1"
+            href="https://www.facebook.com/"
+            role="button"
+            data-mdb-ripple-color="dark"
+            target="_blank"      
+            ><i class="fab fa-facebook-f"></i      
+          ></a> <!--the icon comes from the external stylesheet-->
+          <!--target="_blank" will lead to another tab and leaving the original page untouched-->
+    
+          <!-- Twitter -->
+          <a
+            class="btn btn-link btn-floating btn-lg text-dark m-1"
+            href="https://www.twitter.com/"
+            role="button"
+            data-mdb-ripple-color="dark"
+            target="_blank"
+            ><i class="fab fa-twitter"></i
+          ></a><!--the icon comes from the external stylesheet-->
+          <!--target="_blank" will lead to another tab and leaving the original page untouched-->
+    
+          <!-- Google -->
+          <a
+            class="btn btn-link btn-floating btn-lg text-dark m-1"
+            href="https://www.google.com/"
+            role="button"
+            data-mdb-ripple-color="dark"
+            target="_blank"
+            ><i class="fab fa-google"></i
+          ></a><!--the icon comes from the external stylesheet-->
+          <!--target="_blank" will lead to another tab and leaving the original page untouched-->
+    
+          <!-- Instagram -->
+          <a
+            class="btn btn-link btn-floating btn-lg text-dark m-1"
+            href="https://www.instagram.com/"
+            role="button"
+            data-mdb-ripple-color="dark"
+            target="_blank"
+            ><i class="fab fa-instagram"></i
+          ></a><!--the icon comes from the external stylesheet-->
+          <!--target="_blank" will lead to another tab and leaving the original page untouched-->
+    
+          <!-- Linkedin -->
+          <a
+            class="btn btn-link btn-floating btn-lg text-dark m-1"
+            href="https://www.linkedin.com/"
+            role="button"
+            data-mdb-ripple-color="dark"
+            target="_blank"
+            ><i class="fab fa-linkedin"></i
+          ></a><!--the icon comes from the external stylesheet-->
+          <!--target="_blank" will lead to another tab and leaving the original page untouched-->
+    
+          <!-- Telegram -->
+          <a
+            class="btn btn-link btn-floating btn-lg text-dark m-1"
+            href="https://web.telegram.org/a/"
+            role="button"
+            data-mdb-ripple-color="dark"
+            target="_blank"
+            ><i class="fab fa-telegram"></i
+          ></a><!--the icon comes from the external stylesheet-->
+          <!--target="_blank" will lead to another tab and leaving the original page untouched-->
+          
+        </section>
+      </div>
+    
+      <!-- Copyright -->
+      <div class="text-center text-dark p-3" style="background-color: rgba(255, 0, 0, 0.2);">
+        Copyright &copy; 2024 YE MYAT THWIN (SP) | All rights reserved |
+          <a href="mailto:yemyat.23@ichat.sp.edu.sg">YEMYAT.23@ichat.sp.edu.sg</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <a class="circle" href="globalChat.html"
+      ><img src="./img/chat_icon.png"
+        class="img-fluid"
+    /></a>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
+      integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/queryCmds.js" type="text/javascript"></script>
+    <script src="js/getCurrentURL.js" type="text/javascript"></script>
+    <script src="js/userNavbarToggle.js" type="text/javascript"></script>
+    <script src="js/showProfile.js" type="text/javascript"></script>
+  </body>
+</html>
